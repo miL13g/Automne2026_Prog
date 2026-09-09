@@ -22,25 +22,25 @@ PRIX_TOTAL = 149.40
 ARTICLES_PAR_PAQUET = 5
 
 # --- Erreur 1 ---
-print("Debut du programme)
+print("Debut du programme")
 
 # --- Erreur 2 ---
 prix_moyen = PRIX_TOTAL / NOMBRE_ARTICLES
-print(f"Prix moyen : {prix_moyen} $"
+print(f"Prix moyen : {prix_moyen} $")
 
 # --- Erreur 3 ---
-    print("Nombre d'articles :", NOMBRE_ARTICLES)
+print("Nombre d'articles :", NOMBRE_ARTICLES)
 
 # --- Erreur 4 ---
-print("Prix total :" PRIX_TOTAL)
+print("Prix total : PRIX_TOTAL")
 
 # --- Erreur 5 ---
 nb_paquets = NOMBRE_ARTICLES // ARTICLES_PAR_PAQUET
-NOMBRE_ARTICLES % ARTICLES_PAR_PAQUET = articles_restants
+articles_restants = NOMBRE_ARTICLES % ARTICLES_PAR_PAQUET 
 
 # --- Erreur 6 ---
 total_verification = nb_paquets
-total_verification * = ARTICLES_PAR_PAQUET
+total_verification *= ARTICLES_PAR_PAQUET
 total_verification += articles_restants
 
 print(f"Paquets complets : {nb_paquets}")

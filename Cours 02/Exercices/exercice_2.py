@@ -1,8 +1,8 @@
 # =============================================================
 # Exercice 2 - Operateurs et lecture des erreurs (sections 2.4 a 2.6)
 #
-# Auteur : (inscris ton nom ici)
-# Date   : (inscris la date ici, format aaaa/mm/jj)
+# Auteur : Émile Bousquet
+# Date   : 2026/08/31
 # Sujet  : Exercice 2 du cours 02
 #
 # CONSIGNE : remplace chaque None par ta reponse.
@@ -19,22 +19,22 @@
 # Fais l'exercice de tete AVANT de verifier dans Python.
 
 # A1) 17 / 5
-reponse_a1 = None
+reponse_a1 = 3.4
 
 # A2) 17 // 5
-reponse_a2 = None
+reponse_a2 = 3
 
 # A3) 17 % 5
-reponse_a3 = None
+reponse_a3 = 2
 
 # A4) -17 // 5   (attention : la troncature se fait vers le bas)
-reponse_a4 = None
+reponse_a4 = -4
 
 # A5) 10 / 2
-reponse_a5 = None
+reponse_a5 = 5.0
 
 # A6) Le type du resultat de 10 / 2, sous forme de chaine : "int" ou "float"
-reponse_a6 = None
+reponse_a6 = "float"
 
 
 # -------------------------------------------------------------
@@ -49,14 +49,14 @@ reponse_a6 = None
 #     x //= 3    -> B3
 #     x %= 4     -> B4
 
-reponse_b1 = None
-reponse_b2 = None
-reponse_b3 = None
-reponse_b4 = None
+reponse_b1 = 8
+reponse_b2 = 16
+reponse_b3 = 5
+reponse_b4 = 1
 
 # B5) On part de y = 7, puis on applique  y /= 7
 #     Quelle est la valeur de y ? (attention au type!)
-reponse_b5 = None
+reponse_b5 = 1.0
 
 
 # -------------------------------------------------------------
@@ -71,9 +71,9 @@ SECONDES_PAR_MINUTE = 60
 MINUTES_PAR_HEURE = 60
 SECONDES_PAR_HEURE = SECONDES_PAR_MINUTE * MINUTES_PAR_HEURE
 
-nb_heures = None    # int
-nb_minutes = None   # int, entre 0 et 59
-nb_secondes = None  # int, entre 0 et 59
+nb_heures = DUREE_TOTALE_SECONDES // SECONDES_PAR_HEURE   # int
+nb_minutes = (DUREE_TOTALE_SECONDES % SECONDES_PAR_HEURE) // SECONDES_PAR_MINUTE  # int, entre 0 et 59
+nb_secondes = DUREE_TOTALE_SECONDES % SECONDES_PAR_MINUTE # int, entre 0 et 59
 
 
 # -------------------------------------------------------------
@@ -88,10 +88,10 @@ TAUX_TVQ = 0.09975
 
 quantite = 3
 
-sous_total = None    # prix unitaire * quantite
-montant_tps = None   # sous-total * taux de TPS
-montant_tvq = None   # sous-total * taux de TVQ
-total_facture = None # sous-total + les deux taxes
+sous_total = PRIX_UNITAIRE * quantite    # prix unitaire * quantite
+montant_tps = sous_total * TAUX_TPS   # sous-total * taux de TPS
+montant_tvq = sous_total * TAUX_TVQ   # sous-total * taux de TVQ
+total_facture = sous_total + montant_tps + montant_tvq # sous-total + les deux taxes
 
 
 # -------------------------------------------------------------
@@ -101,9 +101,10 @@ total_facture = None # sous-total + les deux taxes
 
 # D1) Affiche la duree sous la forme :  2 h 46 min 40 s
 # print(...)
-
+print(f"{nb_heures} h {nb_minutes} min {nb_secondes} s ")
 # D2) Affiche le total de la facture, suivi de " $"
 # print(...)
+print(f"{total_facture} $")
 
 
 # -------------------------------------------------------------
@@ -116,16 +117,16 @@ total_facture = None # sous-total + les deux taxes
 
 # E1) De quel TYPE est la toute premiere erreur signalee par Python ?
 #     Reponds par "SyntaxError" ou "IndentationError".
-reponse_e1 = None
+reponse_e1 = "SyntaxError"
 
 # E2) Parmi les 6 blocs numerotes du fichier, lequel produit une
 #     IndentationError ? Reponds par le numero du bloc (un entier).
-reponse_e2 = None
+reponse_e2 = 3
 
 # E3) Vrai ou faux : Python signale toujours la ligne exacte de la faute.
 #     Reponds par True ou False.
-reponse_e3 = None
+reponse_e3 = False
 
 # E4) Combien de lignes le programme corrige affiche-t-il au total ?
 #     Reponds par un entier.
-reponse_e4 = None
+reponse_e4 = 7
